@@ -30,16 +30,14 @@ class DoubleLinkedList {
       return;
     }
     let current = this.head;
-    let prev = this.head;
     while (current !== null && current.value !== searchItem) {
-      prev = current;
       current = current.next;
     }
     if (current === null) {
       console.log('Not Found')
       return;
     }
-    prev.next = new _DNode(newItem, current, prev);
+    current.prev.next = new _DNode(newItem, current, current.prev);
   }
   insertAfter(newItem, searchItem) {
     if (this.head === null) {
@@ -54,8 +52,7 @@ class DoubleLinkedList {
       return;
     }
     else {
-      let next = current.next;
-      current.next = _DNode(newItem, next, current);
+      current.next = _DNode(newItem, current.next, current);
     }
   }
   find(item) {

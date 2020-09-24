@@ -67,6 +67,7 @@ function WhatDoesThisProgramDo(lst) {
 
 /*
     5). Reverse single linked list
+    O(N)
 */
 function reverseList(lst) {
     let current = lst.head;
@@ -91,6 +92,7 @@ function reverseList(lst) {
 
 /*
     6). Third from end
+    O(N)
 */
 function thirdFromEnd(lst) {
     if (lst.head === null) {
@@ -113,6 +115,7 @@ function thirdFromEnd(lst) {
 
 /*
     7). Middle from list
+    O(N)
 */
 function middleFromList(lst) {
     if (lst.head === null) {
@@ -133,6 +136,7 @@ function middleFromList(lst) {
 
 /*
     8). CycleList
+    O(N^2)
 */
 function cycleList(lst) {
     let current = lst.head;
@@ -175,6 +179,7 @@ function mainDLL() {
 
 /*
     10). Reverse DLL
+        O(N)
         With a second link, the need for an additional node index is dismissed
 */
 function reverseDLL(lst) {
